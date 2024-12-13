@@ -1,11 +1,11 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "chaos-coordinator",
+	"name": "Chaos Coordinator",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "A plugin to help you manage your chaos.",
+	"author": "Tasha Gandevia",
+	"authorUrl": "https://tashagandevia.github.io/",
+	"fundingUrl": "",
 	"isDesktopOnly": false
 }
