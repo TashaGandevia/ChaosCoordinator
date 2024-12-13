@@ -1,0 +1,45 @@
+name: CI for Obsidian Plugin
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the project
+      - name: Build plugin
+        run: npm run build
+
+      # Step 5: Lint and TypeScript checks
+      - name: Run TypeScript checks
+        run: npm run tsc --noEmit
+
+      # Step 6: Run tests (if applicable)
+      - name: Run tests
+        run: npm test
+
+      # Step 7: Run Linting
+      - name: Run ESLint
+        run: npm run lint
